@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI策略交易平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.25.0/full/pyodide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <style>
+      /* Custom Scrollbar for Cyberpunk/Terminal feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569; 
+      }
+      .intraday-badge {
+        border-width: 1px;
+        border-style: solid;
+      }
+      .intraday-badge.intraday-on {
+        color: rgba(251, 191, 36, 0.85);
+        background-color: rgba(120, 53, 15, 0.12);
+        border-color: rgba(120, 53, 15, 0.35);
+      }
+      .intraday-badge.intraday-off {
+        color: #94a3b8;
+        background-color: rgba(15, 23, 42, 0.2);
+        border-color: rgba(30, 41, 59, 0.6);
+      }
+      .intraday-toggle {
+        transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      }
+      .intraday-toggle.intraday-on {
+        color: #fbbf24;
+        background-color: rgba(217, 119, 6, 0.2);
+        border-color: rgba(245, 158, 11, 0.5);
+      }
+      .intraday-toggle.intraday-off {
+        color: #64748b;
+        background-color: transparent;
+        border-color: #334155;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.5.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-950 text-slate-200 antialiased overflow-hidden">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

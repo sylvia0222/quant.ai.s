@@ -1,0 +1,5 @@
+{
+  "name": "台灣期貨 AI 高頻交易終端",
+  "description": "專業級 React 前端介面，針對台灣期貨 (TXF) 開發的高頻交易系統。具備即時 1 分 K 線監控、Ollama AI 策略生成與回測視覺化功能。",
+  "requestFramePermissions": []
+}
